@@ -1,0 +1,24 @@
+class Rectangulo:
+    def __init__(self, longitud, anchura):
+        if longitud <= 0 or anchura <= 0:
+            raise ValueError("Valores Inválidos")
+        self.longitud = longitud
+        self.anchura = anchura
+    
+    def area(self,):
+        return self.longitud * self.anchura
+    
+    def perimetro(self,):
+        return 2 * (self.longitud + self.anchura)
+
+if __name__ == "__main__":
+    rectangulo1 = Rectangulo(10, 8)
+
+    print("Longitud:", rectangulo1.longitud)
+    print("Anchura:", rectangulo1.anchura)
+
+    print("Calculando Area. . .")
+    print("Calculando Perímetro. . .")
+
+    print("Area:", rectangulo1.area())
+    print("Perímetro:", rectangulo1.perimetro())
