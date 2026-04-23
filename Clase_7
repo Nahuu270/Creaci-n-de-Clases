@@ -1,0 +1,20 @@
+import math
+
+class Banco:
+    def __init__(self, nombre, interes):
+        self.nombre = nombre
+        self.interes = interes
+    
+    def calcular_interes(self, capital, tiempo):
+        return capital * (1 + self.interes) ** tiempo
+    
+    def tiempo_para_duplicar(self):
+        return math.log(2) / math.log(1 + self.interes)
+
+if __name__ == "__main__":
+    banco1 = Banco("BancoSuperX", 0.05)
+    
+    print("Nombre:", banco1.nombre)
+    print("Interes:", banco1.interes)
+    print("Intereses:", banco1.calcular_interes(1000, 5))
+    print("Tiempo de Duplicación:", banco1.tiempo_para_duplicar())
