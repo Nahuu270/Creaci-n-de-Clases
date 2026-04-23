@@ -1,0 +1,46 @@
+class Estudiante:
+    def __init__(self, nombre, edad, carrera):
+        self.nombre = nombre
+        self.edad = edad
+        self.carrera = carrera
+    
+    def obtener_nombre(self):
+        return self.nombre
+    
+    def establecer_nombre(self, nombre):
+        self.nombre = nombre
+    
+    def obtener_edad(self):
+        return self.edad
+    
+    def establecer_edad(self, edad):
+        self.edad = edad
+    
+    def obtener_carrera(self):
+        return self.carrera
+    
+    def establecer_carrera(self, carrera):
+        self.carrera = carrera
+    
+    def calcular_promedio(self, notas):
+        if len(notas) == 0:
+            return 0
+        return sum(notas) / len(notas)
+
+if __name__ == "__main__":
+    estudiante1 = Estudiante("Pardo", 18, "Ingenieria")
+
+    print("Nombre:", estudiante1.nombre)
+    print("Edad:", estudiante1.edad)
+    print("Carrera:", estudiante1.carrera)
+    print("Nota:", estudiante1.calcular_promedio([9, 6 , 10]))
+
+    estudiante1.establecer_nombre("Felipe")
+    estudiante1.establecer_edad(24)
+    estudiante1.establecer_carrera("Informatica")
+    
+    print("\nDESPUES DE ACTUALIZAR. . . . ")
+    print("Nombre:", estudiante1.nombre)
+    print("Edad:", estudiante1.edad)
+    print("Carrera:", estudiante1.carrera)
+    print("Nota:", estudiante1.calcular_promedio([7, 8 , 8]))
